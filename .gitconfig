@@ -1,0 +1,41 @@
+[init]
+  defaultBranch = main
+[user]
+  email = johnbarreiros2@gmail.com
+  name = John Barreiros
+[alias]
+  amend = commit --amend --reuse-message=HEAD
+  b = branch -vv
+  ci = commit
+  co = checkout
+  d = diff
+  dc = diff --cached
+  f = fetch --all
+  fix = commit --amend
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+  r = remote -v
+  s = status
+  ss = status -s
+[core]
+  editor = vim
+[color "branch"]
+  current = white green
+  local = green
+  remote = blue
+[color "diff"]
+  meta = normal dim
+  frag = magenta
+  old = red
+  new = green
+  whitespace = white red
+[color "status"]
+  branch = white green
+  added = green
+  changed = yellow
+  untracked = yellow dim
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
