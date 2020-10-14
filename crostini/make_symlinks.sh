@@ -1,0 +1,28 @@
+#!/bin/bash
+
+FILES=".bashrc .zshrc .vimrc"
+
+echo "Prerequisites:"
+echo "- zsh (https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)"
+echo "- antigen (https://github.com/zsh-users/antigen)"
+echo ""
+
+# back up any existing dotfiles
+NOW=$(date +"%d-%m-%Y")
+BACKUP_FOLDER="dotfiles_$NOW"
+mkdir -p ~/$BACKUP_FOLDER
+echo "Backing up existing dot files to ~/$BACKUP_FOLDER..."
+for file in $FILES; do
+  if [ -f ~/$file ]; then
+    echo "-- Backing up ~/$file"
+    mv ~/$file ~/$BACKUP_FOLDER/
+  fi
+done
+
+# make the symlinks
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "Creating symlinks..."
+for file in $FILES; do
+  echo "-- Symlinking $file"
+  ln -s $BASE_DIR/$file ~/$file
+done
