@@ -22,6 +22,6 @@ set laststatus=2
 set showmode
 
 " show extra whitespace
-set listchars=tab:▹\ ,trail:·,nbsp:⚋,eol:$
+set listchars=tab:▹\ ,trail:·,nbsp:⚋
 set fillchars=fold:-
 set list
