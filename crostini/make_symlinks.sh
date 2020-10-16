@@ -1,10 +1,11 @@
 #!/bin/bash
 
-FILES=".bashrc .zshrc .vimrc"
+FILES=".bashrc .fonts .gitconfig .tmux.conf .vimrc .zshrc"
 
 echo "Prerequisites:"
 echo "- zsh (https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)"
 echo "- antigen (https://github.com/zsh-users/antigen)"
+echo "- tmux"
 echo ""
 
 # back up any existing dotfiles
