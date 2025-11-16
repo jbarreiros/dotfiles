@@ -1,10 +1,13 @@
 # dotfiles
 
-Don't expect much from here. Personally, I'm not a huge customization guy. I prefer defaults.
+Fair warning: I stick with defaults until there's a reason to change. Don't hold your breath for anything fancy.
 
 General setup:
 
-- Git + [Git-LFS](https://packagecloud.io/github/git-lfs/install)
-- ZSH w/ Antigen
-- NVM (via antigen plugin)
-- TMUX
+- Zsh, [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
+- [Starship prompt](https://starship.rs/guide/)
+- [Neovim](https://neovim.io/)
+
+Misc
+- [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+- https://github.com/zsh-users/zsh-syntax-highlighting
